@@ -1,0 +1,19 @@
+app:
+  name: swamy app
+  msg: welcome to ${app.name}
+
+my:
+  greeting: Hello-from-properties - client 1111
+
+db:
+  connection: connection-string-here
+  host: localhost
+  port: 1527
+  
+spring.cloud.config.uri: http://localhost:8888
+
+logging.level: DEBUG
+logging.level.root: DEBUG
+logging.level.org.springframework.web: DEBUG
+logging.level.org.hibernate: ERROR
+
