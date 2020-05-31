@@ -1,0 +1,15 @@
+
+zips/patients.zip
+snake-servers/target/classes/com/codenjoy/dojo/snake/client/Board.class
+zips/configserver.zip
+zips/eurekaserver.zip
+zips/hospitals.zip
+zips/management.zip
+zips/Snake-Servers-Java.zip
+zips/snake-servers.zip
+snake-servers/target/test-classes/com/codenjoy/dojo/snake/client/BoardTest.class
+snake-servers/target/test-classes/com/codenjoy/dojo/snake/client/SolverTest.class
+Snake-Servers-Java/target/classes/com/codenjoy/dojo/snake/client/YourSolver$1.class
+Snake-Servers-Java/target/classes/com/codenjoy/dojo/snake/client/YourSolver.class
+Snake-Servers-Java/target/classes/com/codenjoy/dojo/snake/client/Board.class
+Snake-Servers-Java/target/classes/com/codenjoy/dojo/snake/model/Elements.class
