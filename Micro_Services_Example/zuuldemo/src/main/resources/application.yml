@@ -28,3 +28,9 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
+
+    HystrixCommandKey:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
