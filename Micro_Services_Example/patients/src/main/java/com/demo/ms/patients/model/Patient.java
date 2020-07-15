@@ -2,10 +2,7 @@ package com.demo.ms.patients.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -21,4 +18,13 @@ public class Patient {
     private int hospitalId;
     private String status;
 
+    //@OneToMany
+    //ArrayList
+
 }
+//verify in mock
+//new features.
+//spring boot test
+//rules engine .. emp, list, Apache - Jrules , Drules, jboss
+//Closures
+

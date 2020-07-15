@@ -6,15 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
+import springfox.documentation.annotations.Cacheable;
 
 import java.util.List;
 
-/**
- * Created by jt on 1/10/17.
- */
+@Component
 @RestController
 @RequestMapping("/patients")
 public class PatientController {
@@ -25,14 +25,11 @@ public class PatientController {
     }
 
 
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<Void> create(@RequestBody Patient patient, UriComponentsBuilder builder){
 
-        //        Article article = new Article();
-//        BeanUtils.copyProperties(articleInfo, article);
-
             patientService.saveOrUpdate(patient);
-//        if (flag == false) {
+        //        if (flag == false) {
 //            return new ResponseEntity<Void>(HttpStatus.CONFLICT);
 //        }
 
@@ -57,8 +54,15 @@ public class PatientController {
             e.printStackTrace();
         }
 
+        return getCacheByID(id);
+    }
+
+    @Cacheable(value = "patients")
+    private Patient getCacheByID(String id){
+        System.out.println("#### no cache -- calling service method. ");
         return patientService.getById(Long.valueOf(id));
     }
+
 
     @PutMapping("/{id}")
     public Patient edit( @RequestBody Patient patient){

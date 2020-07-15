@@ -1,0 +1,18 @@
+package KieRule;
+import  com.epam.test.droolsdemo.dto.TradingOrder;
+
+rule "MONEY"
+
+when
+orderObject : TradingOrder(orderType=="MONEY");
+then
+orderObject.setCommission(2);
+end;
+
+rule "CAPITAL"
+
+when
+orderObject : TradingOrder(orderType=="CAPITAL");
+then
+orderObject.setCommission(5);
+end;
